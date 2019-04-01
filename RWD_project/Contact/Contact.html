@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox"/>
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a class="M" id="HomeM" href="../Home/HomeMPA.html"><li>home</li></a>
+      <a class="M" id="AboutM" href="../About/About.html"><li>about me</li></a>
+      <a class="M" id="SkillsM" href="../Skills/Skills.html"><li>skills</li></a>
+      <a id="SPAM" href="http://localhost:3000"><li>SPA</li></a>
+      <a class="M" id="ContactM" href="Contact.html"><li>contact</li></a>
+      <a class="M" id="CVM" href="../CV/CV.html"><li>cv</li></a>
+    </ul>
+  </div>
+</nav>
+
+<div class="gridMenu">
+  <div class="Left" >
+    <a id="Home" class="menuItem Left" href="../Home/HomeMPA.html">Olga Dimova</a>
+  </div>
+  <div>
+    <a id="AboutMe" class="menuItem" href="../About/About.html">about me</a>
+  </div>
+  <div>
+    <a id="Skills" class="menuItem" href="../Skills/Skills.html">skills</a>
+  </div>
+  <div>
+    <a id="SPA" class="menuItem" href="http://localhost:3000">SPA</a>
+  </div>
+  <div>
+    <a id="Contact" class="menuItem" href="Contact.html">contact</a>
+  </div>
+  <div>
+    <a id="CV" class="menuItem Scroll" href="../CV/CV.html">cv</a>
+  </div>
+</div>
+
+<div id="BigCont">
+  <p id="line1">In case you are interested in me and</p>
+  <p id="line2">you need more detailed information about</p>
+  <p id="line3">my skills and knowledge, please choose</p>
+  <p id="line4">any convenient way to contact me:</p>
+</div>
+<div id="ways">
+  <div id="phone">
+    <a href="tel:+380660570383">+380660570383
+      <br>
+      <img id="Img" src="telegramPhoto.png">
+      <img id="Img" src="viberPhoto.png">
+    </a>
+  </div>
+  <div id="gmail">
+    <a href="mailto:dolya1411@gmail.com">dolya1411@gmail.com</a>
+  </div>
+
+</div>
+
+
+
+<script src="Contact.js"></script>
+</body>
+</html>

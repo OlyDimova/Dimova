@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <link rel="stylesheet" href="Skills.css">
+</head>
+<body>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox"/>
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a id="HomeM" href="../Home/HomeMPA.html"><li>home</li></a>
+      <a id="AboutM" href="../About/About.html"><li>about me</li></a>
+      <a id="SkillsM" href="Skills.html"><li>skills</li></a>
+      <a id="SPAM" href="http://localhost:3000"><li>SPA</li></a>
+      <a id="ContactM" href="../Contact/Contact.html"><li>contact</li></a>
+      <a id="CVM" href="../CV/CV.html"><li>cv</li></a>
+    </ul>
+  </div>
+</nav>
+
+<div class="gridMenu">
+  <div class="Left" >
+    <a id="Home" class="menuItem Left" href="../Home/HomeMPA.html">Olga Dimova</a>
+  </div>
+  <div>
+    <a id="AboutMe" class="menuItem" href="../About/About.html">about me</a>
+  </div>
+  <div>
+    <a id="Skills" class="menuItem" href="Skills.html">skills</a>
+  </div>
+  <div>
+    <a id="SPA" class="menuItem" href="http://localhost:3000">SPA</a>
+  </div>
+  <div>
+    <a id="Contact" class="menuItem" href="../Contact/Contact.html">contact</a>
+  </div>
+  <div>
+    <a id="CV" class="menuItem Scroll" href="../CV/CV.html">cv</a>
+  </div>
+</div>
+
+<a class="second" id="bigBlock" href="#Skillsblock">
+  <div id="hello">
+    <div class="buttonA">
+      <button>
+        <div class="buttonB" >list of skills</div>
+        <div class="front">Show</div>
+        <div id="click" class="frontBelow">Click</div>
+      </button>
+    </div>
+  </div>
+</a>
+
+<div id="line" class="secondLine">
+  <ul>
+    <li class="FED" id="inline1">
+      <h2>Front</h2>
+    </li>
+    <li class="FED" id="inline2">
+      <h2>end</h2>
+    </li>
+    <li class="FED" id="inline3">
+      <h2>Developer</h2>
+    </li>
+  </ul>
+</div>
+
+<div id="Skillsblock">
+  <div id="SkillsList">
+    <p>HTML5</p>
+    <p>CSS3</p>
+    <p>SASS/LESS</p>
+    <p>Respective Web Design</p>
+  </div>
+  <div id="SkillsList">
+    <P>Java Script</P>
+    <P>AJAX & API feed</P>
+    <P>JSON</P>
+    <P>Single Page Application (ReactJS)</P>
+
+  </div>
+  <div id="SkillsList">
+    <P>Bootstrap/ Materialize</P>
+    <P>Git</P>
+    <P>CMS Wordpress</P>
+    <P>JetBrains WebStorm</P>
+  </div>
+</div>
+
+
+<script src="Skill.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: tomato;
+  /*color: #cdcdcd;*/
+  font-family: 'FFDINWeb', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: peachpuff;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+a:hover{
+  text-decoration: line-through;
+}
+
+#menuToggle{
+  display: inline-block;
+  width: auto;
+  position: fixed;
+  /*position: fixed;
+  overflow: hidden;*/
+  top: 0px;
+  padding-top: 1%;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  /*z-index: 1;*/
+}
+
+@media all and (min-width: 1200px) {
+  #menuToggle {
+    display: none;
+  }
+}
+
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  border: 0.5px solid tomato;
+  position: relative;
+  background: peachpuff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-1.5px, -0.5px);
+  background: peachpuff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu{
+  position: absolute;
+  width: 290px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: tomato;
+  opacity: 0.8;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /*to stop flickering of text in SAFARI*/
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+#menu li{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+/*BIG NAVIGATION*/
+.gridMenu{
+  display: grid;
+  grid-template-columns: 60% auto auto auto auto auto;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  overflow: hidden;
+  padding: 1.5%;
+  text-align: right;
+  text-transform: uppercase;
+  background-color: tomato;
+  z-index: 1;
+}
+@media all and (max-width: 1200px) {
+  .gridMenu {
+    display: none;
+  }
+}
+
+/*using more bigger padding number because of scroll line*/
+.Scroll{
+  padding-right: 35%;
+}
+
+.Left{
+  text-align: left;
+  text-transform: initial;
+}
+
+.menuItem{
+  text-decoration: none;
+  color: peachpuff;
+}
+
+.menuItem:hover{
+  text-decoration: line-through;
+}
+/*hover of current page for Big Navigation*/
+#AboutMe.hereAboutMe{
+  text-decoration: line-through;
+}
+/*hover of current page for Hamburger*/
+#AboutM.hereAboutM{
+  text-decoration: line-through;
+}
+
+/*CONTAINER*/
+.gridContainer{
+  display: grid;
+  /*grid-template-columns: 1fr 2fr ;*/
+  grid-column-gap: 0.7%;
+  padding-top: 60px;
+  /*padding-left: 25px;
+  padding-right: 25px;*/
+}
+@media all and (min-width: 320px){
+  .gridContainer{
+    grid-template-columns: 100px 200px;
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media all and (min-width: 420px){
+  .gridContainer{
+    grid-template-columns: 160px 240px;
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media all and (min-width: 480px){
+  .gridContainer{
+    grid-template-columns: 160px 300px;
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media all and (min-width: 640px){
+  .gridContainer{
+    grid-template-columns: 260px 360px;
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media all and (min-width: 768px){
+  .gridContainer{
+    grid-template-columns: 300px 440px;
+    padding-top: 45px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+@media all and (min-width: 1024px){
+  .gridContainer{
+    grid-template-columns: 300px 680px;
+    padding-top: 45px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+@media all and (min-width: 1025px){
+  .gridContainer{
+    grid-template-columns: 1fr 2fr;
+    padding-top: 60px;
+    left: auto;
+    right: auto;
+  }
+}
+.itemC{
+  height: 550px;
+  position: relative;
+  background-color: peachpuff;
+}
+@media all and (min-width: 320px){
+  .itemC{
+  height: 400px;
+  }
+}
+@media all and (min-width: 420px){
+  .itemC{
+    height: 550px;
+  }
+}
+
+#GridFirst{
+  visibility: hidden;
+  height: 10%;
+  transition: all 0.5s;
+}
+#GridFirst.raise1{
+  position: relative;
+  visibility: visible;
+  height: 100%;
+}
+#GridSecond{
+  visibility: hidden;
+  width: 20%;
+  transition: all 1s;
+  transition-delay: 0.4s;
+}
+#GridSecond.raise2{
+  position: relative;
+  visibility: visible;
+  width: 100%;
+}
+
+button{
+  position: absolute;
+  border: 2px solid tomato;
+  border-radius: 50%;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+#ButH{
+  width: 90px;
+  height: 90px;
+  top: 10%;
+  right: 43%;
+  font-size: 26px;
+  visibility: hidden;
+}
+@media all and (min-width: 320px){
+  #ButH{
+    width: 70px;
+    height: 70px;
+    top: 10%;
+    right: 15px;
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 420px){
+  #ButH{
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    right: 40px;
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 640px){
+  #ButH{
+    right: 75px;
+    font-size: 28px;
+  }
+}
+@media all and (min-width: 768px){
+  #ButH{
+    right: 110px;
+    font-size: 30px;
+  }
+}
+@media all and (min-width: 1025px){
+  #ButH{
+    width: 20%;
+    height: 20%;
+    right: 40%;
+  }
+}
+
+#ButH.raise3{
+  visibility: visible;
+  top: 40%;
+  transition: all 0.3s;
+  transition-delay: 0.9s;
+}
+@media all and (min-width: 320px){
+  #ButH.raise3{
+    top: 165px;
+  }
+}
+@media all and (min-width: 420px){
+  #ButH.raise3{
+    top: 235px;
+  }
+}
+@media all and (min-width: 640px){
+  #ButH.raise3{
+    top: 225px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*Button position reg 2fr Grid*/
+#ButM{
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  right: 43%;
+  font-size: 30px;
+  visibility: hidden;
+}
+@media all and (min-width: 320px){
+  #ButM{
+    width: 110px;
+    height: 110px;
+    right: 45px;
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 420px){
+  #ButM{
+    right: 65px;
+  }
+}
+@media all and (min-width: 480px){
+  #ButM{
+    right: 95px;
+  }
+}
+@media all and (min-width: 640px){
+  #ButM{
+    right: 125px;
+  }
+}
+@media all and (min-width: 768px){
+  #ButM{
+    right: 165px;
+  }
+}
+@media all and (min-width: 1024px){
+  #ButM{
+    width: 150px;
+    height: 150px;
+    right: 265px;
+    font-size: 32px;
+  }
+}
+@media all and (min-width: 1025px){
+  #ButM{
+    width: 15%;
+    height: 25%;
+    right: 42.5%;
+    font-size: 28px;
+  }
+}
+
+#ButM.raise4{
+  visibility: visible;
+  top: 40%;
+  transition: all 0.3s;
+  transition-delay: 1.2s;
+}
+@media all and (min-width: 320px){
+  #ButM.raise4{
+    top: 145px;
+  }
+}
+@media all and (min-width: 420px){
+  #ButM.raise4{
+    top: 220px;
+  }
+}
+#cli{
+  visibility: hidden;
+  /*font-size: 80px;*/
+}
+#cli.raise5{
+  visibility: visible;
+  transition: all 0.3s;
+  transition-delay: 1.5s;
+  /*font-size: 60px;*/
+}
+@media all and (min-width: 320px){
+  #cli.raise5{
+    font-size: 50px;
+  }
+}
+@media all and (min-width: 1024px){
+  #cli.raise5{
+    font-size: 60px;
+  }
+}
+
+.buttonC{
+  color: tomato;
+}
+
+.front{
+  position: absolute;
+  top: 83%;
+  right: 81%;
+  width: 20%;
+  height: 15%;
+  font-size: 60px;
+  color: tomato;
+  opacity: 0.8;
+}
+
+
+/*onclick to GridSecond and  buttons will vanish*/
+#ButM{
+  transition: 0.1s;
+  transition-delay: 0s;
+}
+#ButM.vanish{
+  opacity: 0;
+}
+#GridSecond{
+  transition: 0.1s;
+}
+#GridSecond.changecolor{
+  background-color: tomato;
+  border: 2px solid peachpuff;
+}
+
+#list{
+  margin: 15px;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  color: peachpuff;
+  line-height: 180%;
+}
+@media all and (min-width: 320px){
+  #list{
+    font-size: 28px;
+  }
+}
+@media all and (min-width: 480px){
+  #list{
+    font-size: 36px;
+  }
+}
+@media all and (min-width: 768px){
+  #list{
+    font-size: 40px;
+  }
+}
+@media all and (min-width: 1025px){
+  #list{
+    width: 15%;
+    height: 25%;
+    right: 42.5%;
+    font-size: 40px;
+  }
+}
+
+#Draw{
+  visibility: hidden;
+  transition: all 0.3s;
+  transition-delay: 0.5s;
+}
+#Draw.MoveDraw{
+  visibility: visible;
+}
+#Cook{
+  visibility: hidden;
+  transition: all 0.3s;
+  transition-delay: 0.8s;
+}
+#Cook.MoveCook{
+  visibility: visible;
+}
+#Sport{
+  visibility: hidden;
+  transition: all 0.3s;
+  transition-delay: 1.1s;
+}
+#Sport.MoveSport{
+  visibility: visible;
+}
+#Photo{
+  visibility: hidden;
+  transition: all 0.3s;
+  transition-delay: 1.4s;
+}
+#Photo.MovePhoto{
+  visibility: visible;
+}

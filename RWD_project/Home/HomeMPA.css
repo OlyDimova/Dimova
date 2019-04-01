@@ -1,0 +1,377 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: tomato;
+  /*color: #cdcdcd;*/
+  font-family: 'FFDINWeb', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: peachpuff;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+a:hover{
+  text-decoration: line-through;
+}
+
+#menuToggle{
+  display: inline-block;
+  width: auto;
+  position: fixed;
+  /*position: fixed;
+  overflow: hidden;*/
+  top: 0px;
+  padding-top: 1%;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  /*z-index: 1;*/
+}
+
+@media all and (min-width: 1200px) {
+  #menuToggle {
+    display: none;
+  }
+}
+
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  border: 0.5px solid tomato;
+  position: relative;
+  background: peachpuff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-1.5px, -0.5px);
+  background: peachpuff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu{
+  position: absolute;
+  width: 290px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: tomato;
+  opacity: 0.8;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /*to stop flickering of text in SAFARI*/
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+#menu li{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+/*BIG NAVIGATION*/
+.gridMenu{
+  display: grid;
+  grid-template-columns: 60% auto auto auto auto auto;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  overflow: hidden;
+  padding: 1.5%;
+  text-align: right;
+  text-transform: uppercase;
+  background-color: tomato;
+  z-index: 1;
+}
+@media all and (max-width: 1200px) {
+  .gridMenu {
+    display: none;
+  }
+}
+
+/*using more bigger padding number because of scroll line*/
+.Scroll{
+  padding-right: 35%;
+}
+
+.Left{
+  text-align: left;
+  text-transform: initial;
+}
+
+.menuItem{
+  text-decoration: none;
+  color: peachpuff;
+}
+
+.menuItem:hover{
+  text-decoration: line-through;
+}
+/*hover of current page for Big Navigation*/
+#Home.hereHome{
+  text-decoration: line-through;
+}
+/*hover of current page for Hamburger*/
+#HomeM.hereHomeM{
+  text-decoration: line-through;
+}
+
+/*THREE GRIDS*/
+.gridContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0.7%;
+  padding-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media all and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    padding-top: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.itemC{
+  position: relative;
+  background-color: coral;
+  border: 1px solid peachpuff;
+  /*z-index: -1;/*hide container in case scroll*/
+}
+@media all and (min-width: 320px) {
+  .itemC {
+    height: 135px;
+  }
+}
+@media all and (min-width: 420px) {
+  .itemC {
+    height: 225px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .itemC {
+    height: 550px;
+  }
+}
+
+
+.itemC:hover{
+  background-color: peachpuff;
+}
+
+
+
+button{
+  visibility: hidden;
+  position: absolute;
+  top: 40%;
+  right: 35%;
+
+  /*width: 20%;
+  height: 15%;*/
+  border: 2px solid tomato;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 27px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media all and (min-width: 320px){
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 420px) {
+  button {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 640px) {
+  button {
+    width: 90px;
+    height: 90px;
+    font-size: 20px;
+    right: 40%;
+  }
+}
+@media all and (min-width: 1024px) {
+  button {
+    width: 110px;
+    height: 110px;
+    font-size: 24px;
+    right: 35%;
+  }
+}
+
+
+.buttonC{
+  color: tomato;
+}
+
+.front{
+  position: absolute;
+  top: -15%;
+  right: 90%;
+  width: 20%;
+  height: 15%;
+  font-size: 50px;
+  color: coral;
+}
+@media all and (min-width: 320px) {
+  .front {
+    font-size: 36px;
+    top: -10px;
+  }
+}
+
+@media all and (min-width: 420px) {
+  .front {
+    font-size: 40px;
+    top: -10px;
+  }
+}
+
+
+a{
+  text-decoration: none;
+}
+.itemC:hover button{
+  visibility: inherit;
+  width: 30%;
+  height: 22.5%;
+  transition: width 0.6s, height 0.6s;
+}
+@media all and (min-width: 320px) {
+  .itemC:hover button {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+    top: 32px;
+  }
+}
+@media all and (min-width: 420px) {
+  .itemC:hover button {
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    top: 62px;
+  }
+}
+@media all and (min-width: 640px) {
+  .itemC:hover button {
+    width: 110px;
+    height: 110px;
+    font-size: 22px;
+    top: 62px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .itemC:hover button {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    top: 230px;
+  }
+}
+.infront{
+
+  color: peachpuff;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50%;
+  padding-bottom: 50%;
+
+}
+
+@media all and (min-width: 320px) {
+  .infront {
+    padding-top: 50px;
+    font-size: 35px;
+  }
+}
+@media all and (min-width: 420px) {
+  .infront {
+    padding-top: 92px;
+    font-size: 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .infront {
+    padding-top: 255px;
+    font-size: 40px;
+  }
+}

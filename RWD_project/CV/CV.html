@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="CV.css">
+</head>
+<body>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox"/>
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a class="M" id="HomeM" href="../Home/HomeMPA.html"><li>home</li></a>
+      <a class="M" id="AboutM" href="../About/About.html"><li>about me</li></a>
+      <a class="M" id="SkillsM" href="../Skills/Skills.html"><li>skills</li></a>
+      <a id="SPAM" href="http://localhost:3000"><li>SPA</li></a>
+      <a class="M" id="ContactM" href="../Contact/Contact.html"><li>contact</li></a>
+      <a class="M" id="CVM" href="CV.html"><li>cv</li></a>
+    </ul>
+  </div>
+</nav>
+
+<div class="gridMenu">
+  <div class="Left" >
+    <a id="Home" class="menuItem Left" href="../Home/HomeMPA.html">Olga Dimova</a>
+  </div>
+  <div>
+    <a id="AboutMe" class="menuItem" href="../About/About.html">about me</a>
+  </div>
+  <div>
+    <a id="Skills" class="menuItem" href="../Skills/Skills.html">skills</a>
+  </div>
+  <div>
+    <a id="SPA" class="menuItem" href="http://localhost:3000">SPA</a>
+  </div>
+  <div>
+    <a id="Contact" class="menuItem" href="../Contact/Contact.html">contact</a>
+  </div>
+  <div>
+    <a id="CV" class="menuItem Scroll" href="CV.html">cv</a>
+  </div>
+</div>
+
+<div class="Main">
+  <div class="show">
+    <a class="but" href="CV_FrontEndDev.pdf">Show CV</a>
+  </div>
+  <div class="down">
+    <a class="but" href="CV_FrontEndDev.pdf" download="CV_DimovaO">Download</a>
+  </div>
+</div>
+
+
+<script src="CV.js"></script>
+</body>
+</html>

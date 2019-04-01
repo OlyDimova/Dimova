@@ -1,0 +1,189 @@
+.HomeSPA{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0.7%;
+  padding-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media all and (max-width: 768px) {
+  .HomeSPA{
+    grid-template-columns: auto;
+    grid-row-gap: 10px;
+    padding-top: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.Blocks{
+  /*height: 550px;*/
+  position: relative;
+  background-color: peachpuff;
+  border: 1px solid tomato;
+  /*z-index: -1;/*hide container in case scroll*/
+}
+@media all and (min-width: 320px) {
+  .Blocks {
+    height: 135px;
+  }
+}
+@media all and (min-width: 420px) {
+  .Blocks {
+    height: 225px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .Blocks {
+    height: 550px;
+  }
+}
+
+
+.Blocks:hover{
+  background-color: tomato;
+}
+
+
+
+.Buts{
+  visibility: hidden;
+  position: absolute;
+  top: 40%;
+  right: 35%;
+  /*width: 20%;
+  height: 15%;*/
+  border: 2px solid peachpuff;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 27px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media all and (min-width: 320px){
+  .Buts {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+  }
+}
+@media all and (min-width: 420px) {
+  .Buts {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 640px) {
+  .Buts {
+    width: 90px;
+    height: 90px;
+    font-size: 20px;
+    right: 40%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .Buts {
+    width: 110px;
+    height: 110px;
+    font-size: 24px;
+    right: 35%;
+  }
+}
+
+.buttonC{
+  color: peachpuff;
+}
+
+.Follow{
+  position: absolute;
+  top: -15%;
+  right: 90%;
+  width: 20%;
+  height: 15%;
+  font-size: 40px;
+  color: peachpuff;
+}
+@media all and (min-width: 320px) {
+  .Follow {
+    font-size: 36px;
+    top: -10px;
+  }
+}
+
+@media all and (min-width: 420px) {
+  .Follow {
+    font-size: 40px;
+    top: -10px;
+  }
+}
+
+/*a{
+  text-decoration: none;
+}*/
+.Blocks:hover .Buts{
+  visibility: inherit;
+  width: 30%;
+  height: 22.5%;
+  transition: width 0.6s, height 0.6s;
+}
+@media all and (min-width: 320px) {
+  .Blocks:hover .Buts {
+    width: 90px;
+    height: 90px;
+    font-size: 16px;
+    top: 32px;
+  }
+}
+@media all and (min-width: 420px) {
+  .Blocks:hover .Buts {
+    width: 100px;
+    height: 100px;
+    font-size: 17px;
+    top: 62px;
+  }
+}
+@media all and (min-width: 640px) {
+  .Blocks:hover .Buts {
+    width: 110px;
+    height: 110px;
+    font-size: 20px;
+    top: 62px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .Blocks:hover .Buts {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    top: 230px;
+  }
+}
+.infront{
+  /*visibility: visible;*/
+  color: tomato;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50%;
+  padding-bottom: 50%;
+}
+
+@media all and (min-width: 320px) {
+  .infront {
+    padding-top: 50px;
+    font-size: 35px;
+  }
+}
+@media all and (min-width: 420px) {
+  .infront {
+    padding-top: 92px;
+    font-size: 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .infront {
+    padding-top: 255px;
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="About.css">
+</head>
+<body>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox"/>
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a id="HomeM" href="../Home/HomeMPA.html"><li>home</li></a>
+      <a id="AboutM" href="About.html"><li>about me</li></a>
+      <a id="SkillsM" href="../Skills/Skills.html"><li>skills</li></a>
+      <a id="SPAM" href="http://localhost:3000"><li>SPA</li></a>
+      <a id="ContactM" href="../Contact/Contact.html"><li>contact</li></a>
+      <a id="CVM" href="../CV/CV.html"><li>cv</li></a>
+    </ul>
+  </div>
+</nav>
+
+<div class="gridMenu">
+  <div class="Left" >
+    <a id="Home" class="menuItem Left" href="../Home/HomeMPA.html">Olga Dimova</a>
+  </div>
+  <div>
+    <a id="AboutMe" class="menuItem" href="About.html">about me</a>
+  </div>
+  <div>
+    <a id="Skills" class="menuItem" href="../Skills/Skills.html">skills</a>
+  </div>
+  <div>
+    <a id="SPA" class="menuItem" href="http://localhost:3000">SPA</a>
+  </div>
+  <div>
+    <a id="Contact" class="menuItem" href="../Contact/Contact.html">contact</a>
+  </div>
+  <div>
+    <a id="CV" class="menuItem Scroll" href="../CV/CV.html">cv</a>
+  </div>
+</div>
+
+<div class="gridContainer">
+  <div id="GridFirst" class="itemC">
+    <button id="ButH">
+      <div class="buttonC" >Hello!</div>
+    </button>
+  </div>
+  <div id="GridSecond" class="itemC">
+    <button id="ButM">
+      <div class="buttonC" >Meet my interests</div>
+      <div id="cli" class="front">Click</div>
+    </button>
+
+    <ul id="list">
+      <li id="Draw">drawing</li>
+      <li id="Cook">cooking</li>
+      <li id="Sport">sport</li>
+      <li id="Photo">taking photo</li>
+    </ul>
+  </div>
+</div>
+
+
+
+<script src="About.js"></script>
+</body>
+</html>
+
